@@ -20,11 +20,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from website.views import index_view
 from django.shortcuts import redirect
+from django.conf import settings
 
 urlpatterns = [
     path('', lambda request: redirect('/index')),
     path('admin/', admin.site.urls),
     path('',include('website.urls')),
 ]
+
+    
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
