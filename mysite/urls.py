@@ -26,6 +26,7 @@ urlpatterns = [
     path('', lambda request: redirect('/index')),
     path('admin/', admin.site.urls),
     path('',include('website.urls')),
+    path('blog/',include('blog.urls'))
 ]
 
     
