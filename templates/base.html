@@ -68,9 +68,12 @@
                         <li class="menu-has-children"><a href="">Blog</a>
                             <ul>
                                 <li><a href="{% url 'blog:index' %}">Blog Home</a></li>
-                                <li><a href="{% url 'blog:single' %}">Blog Single</a></li>
+                                {% for post in latest_posts %}
+                                <li><a href="{% url 'blog:single' pid=post.id %}">{{ post.title }}</a></li>
+                                {% endfor %}
                             </ul>
                         </li>
+
                         <li class="menu-has-children"><a href="">Pages</a>
                             <ul>
                                 <li><a href="elements.html">Elements</a></li>
