@@ -25,12 +25,12 @@ def function():
 def snippet(value,arg=20):
     return value[:arg] + "..."
 
-@register.inclusion_tag('blog/blog-popular-posts.html')
+@register.inclusion_tag('templates/blog/blog-popular-posts.html')
 def latestposts(arg=3):
     posts = Post.objects.filter(status=1).order_by('-published_date')[:arg]
     return {'posts':posts}
 
-@register.inclusion_tag('blog/blog-post-categories.html')
+@register.inclusion_tag('templates/blog/blog-post-categories.html')
 def postcategories():
     posts = Post.objects.filter(status=1)
     categories = Category.objects.all()
