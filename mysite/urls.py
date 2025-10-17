@@ -23,6 +23,7 @@ from django.shortcuts import redirect
 from django.conf import settings
 
 urlpatterns = [
+    path('summernote/', include('django_summernote.urls')),
     path('', lambda request: redirect('/index')),
     path('admin/', admin.site.urls),
     path('',include('website.urls')),
