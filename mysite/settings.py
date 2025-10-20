@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'taggit',    
     'django_extensions',
     'blog',
+    'accounts',
     'django_summernote',
     'captcha',
 ]
