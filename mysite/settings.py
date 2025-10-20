@@ -64,7 +64,7 @@ ROBOTS_USE_HOST = True
 ROBOTS_USE_SITEMAP = True
 
 # summernote configs
-UMMERNOTE_THEME = 'bs4'
+SUMMERNOTE_THEME = 'bs4'
 SUMMERNOTE_CONFIG = {
     # Using SummernoteWidget - iframe mode, default
     'iframe': True,
